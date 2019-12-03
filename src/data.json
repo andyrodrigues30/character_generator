@@ -1,0 +1,41 @@
+{
+    "personality": [
+        "A kind","An ugly","A spotty","A pretty","A disgusting","An unpleasent","A tired","An upset","A happy","An afraid","An angry","A strong","A weak",
+        "An envious","A supprised","An understanding","A confident","A reliable","A sympathetic","An interested","A satisfied","An accepting","A joyous",
+        "A fortuate","A lucky","A delighted","An impulsive","A greatful","A clever","A quiet","An uncomfortable","A comfortable", "A beautiful", "A generous"
+    ],
+    "character": [
+        "giant","minatour","princess","dragon","mage","wizard","warlock","god","beast","demigod","human","halfling","dwarf", "vlogger",
+        "elf","gnome","half-orc","cyborg","vampire","werewolf","zombie","alien","goblin","girl","buissnessman","artist",
+        "teenager","baby","shop assistance","grocery store owner","teacher","athlete","designer","builder","prince","villian","superhero","dog","cat",
+        "monkey","guitarist","drummer","singer","astronaut","policeman","fireman","plumber","doctor","nurse","father","mother","aunt", "sister","brother"
+    ],
+    "character2": [
+        "a giant", "a minatour", "a princess", "a dragon", "a mage", "a wizard", "a warlock", "a god", "a beast", "a demigod", "a human",
+        "a halfling", "a dwarf", "a vlogger",
+        "an elf", "a gnome", "a half-orc", "a cyborg", "a vampire", "a werewolf", "a zombie", "an alien", "a goblin", "the undead", "a girl",
+        "a buissnessman", "an artist", "a teenager", "a baby", "a shop assistance", "a grocery store owner", "a teacher", "an athlete",
+        "a designer", "a builder", "a prince", "a villian", "a superhero", "a dog", "a cat",
+        "a monkey", "a guitarist", "a drummer", "a singer", "an astronaut", "a policeman", "a fireman", "a plumber", "a doctor", "a nurse",
+        "a father", "a mother", "an aunt", "a sister", "a brother"
+    ],
+    "clothing": [
+        "a hat","a scarf","jeans","a cape","glasses","sunglasses","a tie","socks","a jacket","a coat","boots","trainers","shorts",
+        "a skirt","a belt","a dress","a cap","gloves","a sweater","a shirt","a t-shirt","pyjamas","trousers","slippers","a suit"
+    ],
+    "verb": [
+        "talking to","dancing with","speaking to","laughing at","swimming with","holding","riding","playing"
+    ],
+    "holdingitem": [
+        "an apple","spaghetti","a guitar","a sandwich","a pen","a book","a sword","an axe","a saw","a coin","money",
+        "a laptop","a computer","a tv","a balloon","a camera","a box","a phone","a cup","a fizzy drinks can","a bottle","clock","a watch"
+   ],
+    "ridingitem": [
+        "a bike", "a car", "a horse", "a teacup", "a ship", "a spaceship", "an aeroplane", "a helicopter", "bee", "chicken", "dog", "truck",
+        "van", "bus"
+    ],
+    "playingitem": [
+        "a guitar", "cards", "an instrument", "an oboe", "a violin", "a harp", "a saxophone", "a trombone", "a trumpet",
+        "a piano", "the drums"
+    ]
+}

@@ -1,9 +1,9 @@
-#Character Generator
+# Character Generator
 
-##What is this project about?
+## What is this project about?
 This project was created to explore [react.js](https://github.com/facebook/create-react-app). It allows users to randomly generate uniques character descriptions.
 
-##How to use it
+## How to use it
 In the project directory, you can run:
 
 `yarn start`

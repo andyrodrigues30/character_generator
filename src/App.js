@@ -1,42 +1,105 @@
-import React from 'react';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import "./App.css";
 
-const json = require('./data.json');
+const json = require("./data.json");
 
-function getItem() {
-  if (json["verb"] === 'holding') {
-    let item = json["holdingitem"][Math.floor(Math.random() * json["holdingitem"].length)];
-    return item
-  } else if (json["verb"] === 'riding') {
-    let item = json["ridingitem"][Math.floor(Math.random() * json["ridingitem"].length)];
-    return item
-  } else if (json["verb"] === 'playing') {
-    let item = json["playingitem"][Math.floor(Math.random() * json["playingitem"].length)];
-    return item
-  } else {
-    let item = json["character2"][Math.floor(Math.random() * json["character2"].length)];
-    return item
-  }
-}
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-class App extends React.Component {
-  state = {
-    text: '...'
+    this.state = {
+      fetched: false,
+      history: []
+    };
   }
 
-  onClickGenerate = () => {
-    const sentence = `${json["personality"][Math.floor(Math.random() * json["personality"].length)]} ${json["character"][Math.floor(Math.random() * json["character"].length)]} wearing ${json["clothing"][Math.floor(Math.random() * json["clothing"].length)]} ${json["verb"][Math.floor(Math.random() * json["verb"].length)]} ${getItem()}.`;
+  getRandom = obj => obj[Math.floor(Math.random() * obj.length)];
+
+  genCharacter = () => {
+    const {
+      verb,
+      holdingitem,
+      ridingitem,
+      playingitem,
+      character2,
+      personality,
+      character,
+      clothing
+    } = json;
+
+    let item;
+
+    switch (verb) {
+      case "holding":
+        item = this.getRandom(holdingitem);
+        break;
+      case "riding":
+        item = this.getRandom(ridingitem);
+        break;
+      case "playing":
+        item =this.getRandom(playingitem);
+        break;
+      default:
+        item = this.getRandom(character2);
+        break;
+    };
+
     this.setState({
-      text: sentence
+      fetched: true,
+      history: [
+        ...this.state.history,
+        {
+          personality: this.getRandom(personality),
+          character: this.getRandom(character),
+          clothing: this.getRandom(clothing),
+          verb: this.getRandom(verb),
+          item
+        }
+      ]
     });
   }
 
+  imp = word => <span id="imp">{word}</span>;
+
   render() {
+    console.log(this.state.history);
+    const { fetched } = this.state;
+
+    let prev;
+    let current;
+
+    if (this.state.history.length > 0) {
+      const { personality, character, clothing, verb, item } = this.state.history[this.state.history.length - 1];
+
+      current = (
+        fetched
+          ? <Fragment>{personality} {this.imp(character)} wearing {this.imp(clothing)} {verb} {this.imp(item)}.</Fragment>
+          : "..."
+      );
+    }
+
+    if (this.state.history.length > 1) {
+      const { personality, character, clothing, verb, item } = this.state.history[this.state.history.length - 2];
+
+      current = (
+        fetched
+          ? <Fragment>{personality} {this.imp(character)} wearing {this.imp(clothing)} {verb} {this.imp(item)}.</Fragment>
+          : "..."
+      );
+    }
+
     return (
       <div className="App">
-        <h1>Character Generator</h1>
-        <button onClick={this.onClickGenerate}>Generate</button>
-        <p>{this.state.text}</p>
+        <header>
+          <h1>Character Generator</h1>
+        </header>
+        <main>
+          <button className="genButton" onClick={this.genCharacter}>GENERATE</button>
+          <div className="sentence">
+            <h2>{prev}</h2>
+            <h2>{current}</h2>
+          </div>
+        </main>
       </div>
     );
   }

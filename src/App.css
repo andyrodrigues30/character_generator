@@ -1,3 +1,80 @@
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #2c7873;
+  color: #ffffff;
+}
+
 .App {
+  height: 100vh;
   text-align: center;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+header {
+  grid-area: header;
+  padding: 30px;
+}
+
+main {
+  grid-area: main;
+  align-self: end;
+}
+
+h1 {
+  font-size: 65px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.genButton {
+  font-size: 20px;
+  position: relative;
+  color: white;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: #ffd800 solid 1px;
+  transition: 0.3s ease-in-out;
+  transition-property: background, border-color;
+}
+
+.sentence {
+  padding: 30px;
+}
+
+.genButton:hover {
+  background: #004445;
+}
+
+
+#imp {
+  position: relative;
+  color: #ffd800;
+}
+
+#imp::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: #ffffff;
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

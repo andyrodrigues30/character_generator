@@ -5,10 +5,12 @@ This project was created to explore [react.js](https://github.com/facebook/creat
 
 ##How to use it
 In the project directory, you can run:
+
 `yarn start`
+
 This runs the app in the development mode.
 
-To view it in the browser, go to [http://localhost:3000](http://localhost:3000) 
+To view it in the browser, go to [http://localhost:3000/](http://localhost:3000/) 
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.

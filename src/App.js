@@ -94,11 +94,11 @@ class App extends Component {
           <h1>Character Generator</h1>
         </header>
         <main>
-          <button className="genButton" onClick={this.genCharacter}>GENERATE</button>
           <div className="sentence">
             <h2>{prev}</h2>
             <h2>{current}</h2>
           </div>
+          <button className="genButton" onClick={this.genCharacter}>GENERATE</button>
         </main>
       </div>
     );
